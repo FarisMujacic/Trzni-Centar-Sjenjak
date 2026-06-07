@@ -1,0 +1,258 @@
+/* ====== MODAL OVERLAY ====== */
+
+.store-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  background: rgba(15, 23, 42, 0.55);      /* tamni overlay */
+  backdrop-filter: blur(6px);
+}
+
+/* ====== MODAL KARTICA ====== */
+
+.store-modal {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.3);
+  border: 1px solid #e5e7eb;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.store-modal-title {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* redovi tipa "Sprat: X", "Radno vrijeme: Y" */
+
+.store-modal-row {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.store-modal-row strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* opis */
+
+.store-modal-desc {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* link telefona */
+
+.store-modal-row a {
+  color: #f59e0b;
+  text-decoration: none;
+}
+
+.store-modal-row a:hover {
+  text-decoration: underline;
+}
+
+/* close dugme (X) */
+
+.store-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.store-modal-close:hover {
+  color: #111827;
+}
+
+/* ====== Dugme "Detaljnije →" na kartici ====== */
+
+.store-card-more {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #fbbf24;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.15s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.store-card-more:hover {
+  background: #facc15;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.2);
+  transform: translateY(-1px);
+}
+
+.store-card-more:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ====== Responsive ====== */
+
+@media (max-width: 480px) {
+  .store-modal {
+    padding: 18px 16px 16px;
+    border-radius: 16px;
+  }
+
+  .store-modal-title {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* galerija u modalu */
+.store-modal-gallery {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.store-modal-main-image-wrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f3f4f6;
+
+  /* DODANO: da wrapper ima stvarnu visinu */
+  height: 220px;          /* možeš staviti 200–280 po želji */
+  max-height: 260px;
+}
+
+
+.store-modal-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+  display: block;
+}
+
+
+.store-modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(15, 23, 42, 0.7);
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.store-modal-nav--left {
+  left: 10px;
+}
+
+.store-modal-nav--right {
+  right: 10px;
+}
+
+.store-modal-thumbs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.store-modal-thumb-btn {
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+
+.store-modal-thumb-btn--active {
+  border-color: #fbbf24;
+}
+
+.store-modal-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ====== Slika u modalu ponude ====== */
+
+.offer-modal-image {
+  margin: 8px 0 10px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f3f4f6;
+  max-height: 260px;
+}
+
+.offer-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.store-cover img,
+.store-cover video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.store-thumbs img,
+.store-thumbs video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.store-modal-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.store-modal-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  display: block;
+}

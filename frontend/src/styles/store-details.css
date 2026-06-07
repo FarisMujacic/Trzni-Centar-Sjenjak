@@ -1,0 +1,295 @@
+:root {
+  --brand-black: #111827;
+  --muted: #6b7280;
+  --panel: #ffffff;
+  --line: #e5e7eb;
+  --bg-soft: #f7f5f1;
+  --gold: #f5b400;
+}
+
+/* glavni wrapper */
+.store-page {
+  min-height: 100vh;
+  background: var(--mall-cream);
+  padding: clamp(44px, 7vw, 88px) 16px;
+}
+
+.store-shell {
+  max-width: var(--mall-container);
+  margin: 0 auto;
+}
+
+/* back dugme */
+.store-back-btn {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #111827;
+  margin-bottom: 18px;
+  transition: background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.store-back-btn:hover {
+  background: #f3f4f6;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+/* header */
+.store-header {
+  margin-bottom: 18px;
+}
+
+.store-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin: 0 0 4px 0;
+}
+
+.store-title {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+  margin: 0;
+  color: var(--brand-black);
+}
+
+.store-floor {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* layout: slike + info */
+.store-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(260px, 2fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.store-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.store-cover {
+  border-radius: var(--mall-radius-md);
+  background: #f3f4f6;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;        /* po želji */
+  aspect-ratio: 16 / 9;
+}
+
+
+.store-cover img {
+  display: block;
+  width: 100%;
+  height: auto;       
+  max-height: 520px;   
+  object-fit: contain;
+}
+
+
+.store-cover--empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* thumbs */
+.store-thumbs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.store-thumb-btn {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0;
+  background: #ffffff;
+  flex: 0 0 72px;
+  height: 72px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.store-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* desno info */
+.store-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.store-info-card {
+  background: var(--panel);
+  border-radius: var(--mall-radius-md);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  padding: 14px 16px 16px;
+}
+
+.store-info-card h2 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand-black);
+}
+
+/* radno vrijeme */
+.store-hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.store-hours li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.store-hours li:last-child {
+  border-bottom: none;
+}
+
+.store-hours li span:first-child {
+  color: var(--muted);
+}
+
+.store-hours-note {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* kontakt */
+.store-contact {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.store-contact a {
+  color: var(--brand-black);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.3);
+}
+
+.store-contact a:hover {
+  color: var(--gold);
+  border-bottom-color: rgba(245, 180, 0, 0.4);
+}
+
+.store-contact--muted {
+  color: var(--muted);
+}
+
+/* opis */
+.store-detail-description {
+  margin-top: 24px;
+  padding: 16px 18px 18px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.store-detail-description h2 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.store-detail-description p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--brand-black);
+}
+
+/* helper poruke */
+.store-note {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* responsive */
+@media (max-width: 880px) {
+  .store-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .store-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .store-info-card {
+    flex: 1 1 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .store-page {
+    padding: 28px 12px 40px;
+  }
+  .store-detail-description {
+    padding: 14px 14px 16px;
+  }
+}
+
+.store-cover img,
+.store-cover video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.store-thumbs img,
+.store-thumbs video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.store-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.store-thumb-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}

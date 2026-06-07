@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Secrets and environment variables
+.env
+*.env
+backend/.env
+frontend/.env
+
+# Production data: ne smije se prepisivati pri deploymentu
+backend/data.db
+backend/stores.json
+backend/uploads/
+
+# Local backup
+backend/local-backup-before-security-fix/
+local-backup-before-security-fix/
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/

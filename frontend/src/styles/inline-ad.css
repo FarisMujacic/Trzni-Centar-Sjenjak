@@ -1,0 +1,67 @@
+.inline-ad-section {
+  padding-block: var(--mall-section);
+  background: var(--mall-cream);
+}
+
+.inline-ad {
+  position: relative;
+  min-height: 390px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: var(--mall-radius-lg);
+  background: var(--mall-ink);
+  box-shadow: var(--mall-shadow-lg);
+}
+
+.inline-ad > img,
+.inline-ad__shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.inline-ad > img {
+  object-fit: cover;
+}
+
+.inline-ad__shade {
+  background: linear-gradient(90deg, rgba(12, 13, 15, 0.92), rgba(12, 13, 15, 0.42) 62%, rgba(12, 13, 15, 0.1));
+}
+
+.inline-ad__content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  padding: clamp(26px, 6vw, 66px);
+  color: white;
+}
+
+.inline-ad__content > p {
+  margin: 18px 0 6px;
+  color: var(--mall-gold);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.inline-ad h2 {
+  margin: 0 0 28px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+@media (max-width: 600px) {
+  .inline-ad {
+    min-height: 460px;
+    border-radius: var(--mall-radius-md);
+  }
+
+  .inline-ad__shade {
+    background: linear-gradient(0deg, rgba(12, 13, 15, 0.94), rgba(12, 13, 15, 0.25));
+  }
+}

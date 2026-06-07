@@ -1,0 +1,120 @@
+.mall-gallery {
+  padding-block: var(--mall-section);
+  background: white;
+}
+
+.mall-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 150px;
+  gap: 14px;
+}
+
+.mall-gallery__item {
+  grid-column: span 4;
+  grid-row: span 2;
+  border: 0;
+  border-radius: var(--mall-radius-md);
+  padding: 0;
+  overflow: hidden;
+  background: #e9e6df;
+  cursor: pointer;
+}
+
+.mall-gallery__item--1,
+.mall-gallery__item--4 {
+  grid-column: span 8;
+}
+
+.mall-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 350ms ease;
+}
+
+.mall-gallery__item:hover img {
+  transform: scale(1.035);
+}
+
+.gallery-dialog__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 210;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(8, 9, 10, 0.88);
+}
+
+.gallery-dialog {
+  position: relative;
+  width: min(100%, 1050px);
+  max-height: calc(100vh - 40px);
+  display: grid;
+  place-items: center;
+}
+
+.gallery-dialog > img {
+  max-width: 100%;
+  max-height: calc(100vh - 40px);
+  border-radius: var(--mall-radius-md);
+  object-fit: contain;
+}
+
+.gallery-dialog__close,
+.gallery-dialog__nav {
+  position: absolute;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--mall-ink);
+  cursor: pointer;
+}
+
+.gallery-dialog__close {
+  top: 14px;
+  right: 14px;
+  font-size: 1.5rem;
+}
+
+.gallery-dialog__nav {
+  top: 50%;
+  font-size: 1.8rem;
+  transform: translateY(-50%);
+}
+
+.gallery-dialog__nav--left {
+  left: 14px;
+}
+
+.gallery-dialog__nav--right {
+  right: 14px;
+}
+
+@media (max-width: 760px) {
+  .mall-gallery__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 180px;
+  }
+
+  .mall-gallery__item,
+  .mall-gallery__item--1,
+  .mall-gallery__item--4 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .mall-gallery__item:first-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 430px) {
+  .mall-gallery__grid {
+    grid-auto-rows: 145px;
+  }
+}

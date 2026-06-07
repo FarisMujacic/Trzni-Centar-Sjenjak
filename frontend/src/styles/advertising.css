@@ -1,0 +1,124 @@
+.advertising-cta {
+  padding-block: var(--mall-section);
+  background: var(--mall-cream);
+}
+
+.advertising-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-radius: var(--mall-radius-lg);
+  padding: clamp(30px, 6vw, 68px);
+  background: var(--mall-ink);
+  color: white;
+}
+
+.advertising-cta h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.advertising-cta p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.advertising-cta .button {
+  flex: 0 0 auto;
+}
+
+.advertising-page {
+  background: var(--mall-cream);
+}
+
+.advertising-page__hero {
+  padding-block: clamp(70px, 10vw, 140px);
+  background: var(--mall-ink);
+  color: white;
+}
+
+.advertising-page__hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.45fr);
+  gap: 60px;
+  align-items: center;
+}
+
+.advertising-page__hero h1 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(3rem, 8vw, 6.3rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.advertising-page__hero p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 24px 0 32px;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 1.08rem;
+}
+
+.advertising-page__hero img {
+  width: 100%;
+  filter: brightness(0) invert(1);
+}
+
+.advertising-page__options {
+  padding-block: var(--mall-section);
+}
+
+.advertising-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.advertising-option {
+  min-height: 300px;
+  border: 1px solid var(--mall-border);
+  border-radius: var(--mall-radius-md);
+  padding: 28px;
+  background: white;
+}
+
+.advertising-option > span {
+  color: var(--mall-gold-dark);
+  font-weight: 800;
+}
+
+.advertising-option h3 {
+  margin: 70px 0 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+}
+
+.advertising-option p {
+  margin: 0;
+  color: var(--mall-muted);
+}
+
+@media (max-width: 800px) {
+  .advertising-cta__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .advertising-page__hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .advertising-page__hero img {
+    width: min(260px, 70%);
+  }
+
+  .advertising-options {
+    grid-template-columns: 1fr;
+  }
+}

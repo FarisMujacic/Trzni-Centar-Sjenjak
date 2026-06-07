@@ -1,0 +1,5 @@
+.env
+local-backup-before-security-fix/
+test-temp/
+*.backup
+*.tmp
