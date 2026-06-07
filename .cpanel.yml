@@ -6,3 +6,4 @@ deployment:
     - /bin/cp -R backend/. $DEPLOYPATH/backend/
     - /bin/rm -rf $DEPLOYPATH/build
     - /bin/cp -R build $DEPLOYPATH/
+    - /bin/bash -lc 'source /home/tcsjenja/nodevenv/CENTAR-TRZNI/backend/18/bin/activate && cd /home/tcsjenja/CENTAR-TRZNI/backend && npm install --omit=dev'
