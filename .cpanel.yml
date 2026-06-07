@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tcsjenja/CENTAR-TRZNI
+    - /bin/mkdir -p $DEPLOYPATH/backend
+    - /bin/cp -R backend/. $DEPLOYPATH/backend/
+    - /bin/rm -rf $DEPLOYPATH/build
+    - /bin/cp -R build $DEPLOYPATH/
