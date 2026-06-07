@@ -64,9 +64,15 @@
   font-size: 1.08rem;
 }
 
+.advertising-page__logo {
+  width: 100%;
+  border-radius: var(--mall-radius-md);
+  padding: clamp(18px, 3vw, 30px);
+  background: #faf9f5;
+}
+
 .advertising-page__hero img {
   width: 100%;
-  filter: brightness(0) invert(1);
 }
 
 .advertising-page__options {
@@ -114,7 +120,7 @@
     grid-template-columns: 1fr;
   }
 
-  .advertising-page__hero img {
+  .advertising-page__logo {
     width: min(260px, 70%);
   }
 

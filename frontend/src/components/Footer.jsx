@@ -7,7 +7,11 @@ export default function Footer() {
     <footer className="mall-footer">
       <div className="site-container mall-footer__grid">
         <div className="mall-footer__brand">
-          <Link to="/" aria-label="Sjenjak Center početna">
+          <Link
+            to="/"
+            className="mall-footer__logo"
+            aria-label="Sjenjak Center početna"
+          >
             <img src="/SJENJAK.png" alt="Sjenjak Center" loading="lazy" />
           </Link>
           <p>Sve što vam treba, na jednom mjestu.</p>

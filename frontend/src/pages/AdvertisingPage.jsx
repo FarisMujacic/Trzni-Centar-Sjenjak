@@ -33,7 +33,9 @@ export default function AdvertisingPage() {
               Pošaljite upit
             </a>
           </div>
-          <img src="/SJENJAK.png" alt="Sjenjak Center" />
+          <div className="advertising-page__logo">
+            <img src="/SJENJAK.png" alt="Sjenjak Center" />
+          </div>
         </div>
       </section>
 

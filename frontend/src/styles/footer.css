@@ -11,10 +11,16 @@
   padding-bottom: 54px;
 }
 
+.mall-footer__logo {
+  display: inline-flex;
+  border-radius: var(--mall-radius-sm);
+  padding: 8px 12px;
+  background: #faf9f5;
+}
+
 .mall-footer__brand img {
   width: auto;
   height: 50px;
-  filter: brightness(0) invert(1);
 }
 
 .mall-footer__brand p,

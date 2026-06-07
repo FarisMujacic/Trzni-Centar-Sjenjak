@@ -53,7 +53,7 @@ export default function HomePage() {
     <main className="home">
       <Background />
       {state.error && <p className="home__notice">{state.error}</p>}
-      <Offers offers={ads.slice(0, 1)} loading={state.loading} />
+      <Offers offers={ads} loading={state.loading} />
       <WhatWeOffer stores={stores} />
       <StoreDirectory stores={stores} loading={state.loading} />
       <InlineAdBanner ad={ads[1]} />

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/background.css";
 
 export default function Background() {
@@ -25,9 +24,6 @@ export default function Background() {
           <a className="button button--gold" href="#prodavnice">
             Pronađi prodavnicu
           </a>
-          <Link className="button button--glass" to="/oglasavanje">
-            Oglašavanje u centru
-          </Link>
         </div>
       </div>
     </section>
